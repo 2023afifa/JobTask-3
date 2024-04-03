@@ -23,7 +23,6 @@ const Banner = () => {
                     <div>
                         <h1 className="text-5xl font-bold">{profile.user.about.name}</h1>
                         <p className="py-6">{profile.user.about.subTitle}</p>
-                        <button className="btn btn-primary">Get Started</button>
                     </div>
                 </div>
             </div>
