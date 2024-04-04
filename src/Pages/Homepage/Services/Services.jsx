@@ -15,7 +15,7 @@ const Services = () => {
     return (
         <div>
             <h2 className="text-center font-bold text-2xl mt-10 mb-5">Services</h2>
-            <div>
+            <div className="grid lg:grid-cols-3 gap-10">
                 {
                     profile.user?.services.map(s => <Service key={s.id} s={s}></Service>)
                 }
