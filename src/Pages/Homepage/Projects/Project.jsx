@@ -40,7 +40,7 @@ const Project = ({ p }) => {
                         </div>
                     </div>
                     :
-                    <></>
+                    <> </>
             }
         </div>
     );

@@ -14,9 +14,9 @@ const Timeline = () => {
     return (
         <div>
             <h2 className="text-center font-bold text-2xl mt-10 mb-5">Timeline</h2>
-            <div className="grid lg:grid-cols-3 gap-10">
+            <div className="mx-20">
                 {
-                    profile.user?.timeline.map(p => <SingleTimeline key={p.id} p={p}></SingleTimeline>)
+                    profile.user?.timeline.map(t => <SingleTimeline key={t.id} t={t}></SingleTimeline>)
                 }
             </div>
         </div>
