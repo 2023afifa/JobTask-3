@@ -1,5 +1,5 @@
 const Project = ({ p }) => {
-    const { title, sequence, image, description, liveurl, githuburl, techStack, enabled } = p;
+    const { _id, title, sequence, image, description, liveurl, githuburl, techStack, enabled } = p;
 
     return (
         <div>
@@ -11,13 +11,24 @@ const Project = ({ p }) => {
                         <div className="card-body">
                             <h2 className="card-title">{title}</h2>
                             <p>{sequence}</p>
-                            <p>{description}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn" onClick={() => document.getElementById('my_modal_5').showModal()}>View</button>
-                                <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                                <button className="btn" onClick={() => document.getElementById(`my_modal_${_id}`).showModal()}>View</button>
+                                <dialog id={`my_modal_${_id}`} className="modal modal-bottom sm:modal-middle">
                                     <div className="modal-box">
-                                        <h3 className="font-bold text-lg">Hello!</h3>
-                                        <p className="py-4">Press ESC key or click the button below to close</p>
+                                        <figure><img src={image?.url} alt="" /></figure>
+                                        <h3 className="font-bold text-lg">{title}</h3>
+                                        <p className="py-4">{description}</p>
+                                        <div className="grid lg:grid-cols-6 mb-5">
+                                            {
+                                                techStack.map(tech => <div key={tech.id}>
+                                                    <p>{tech}</p>
+                                                </div>)
+                                            }
+                                        </div>
+                                        <div className="">
+                                            <button className="btn mr-5">Live Link</button>
+                                            <button className="btn">Github Link</button>
+                                        </div>
                                         <div className="modal-action">
                                             <form method="dialog">
                                                 <button className="btn">Close</button>
