@@ -7,6 +7,7 @@ import Projects from "../Projects/Projects";
 import Timeline from "../Timeline/Timeline";
 import Contact from "../Contact/Contact";
 import Testimonials from "../Testimonials/Testimonials";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <Timeline></Timeline>
             <Testimonials></Testimonials>
             <Contact></Contact>
+            <Footer></Footer>
         </div>
     );
 };
