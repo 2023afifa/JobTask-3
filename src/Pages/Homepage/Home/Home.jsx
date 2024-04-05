@@ -5,8 +5,8 @@ import Services from "../Services/Services";
 import Skills from "../Skills/Skills";
 import Projects from "../Projects/Projects";
 import Timeline from "../Timeline/Timeline";
-import Testimonial from "../Testimonial/Testimonial";
 import Contact from "../Contact/Contact";
+import Testimonials from "../Testimonials/Testimonials";
 
 const Home = () => {
     return (
@@ -18,7 +18,7 @@ const Home = () => {
             <Skills></Skills>
             <Projects></Projects>
             <Timeline></Timeline>
-            <Testimonial></Testimonial>
+            <Testimonials></Testimonials>
             <Contact></Contact>
         </div>
     );
