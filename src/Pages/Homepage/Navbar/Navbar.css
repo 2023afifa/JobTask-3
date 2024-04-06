@@ -59,3 +59,9 @@ li {
     font-size: 20px;
     cursor: pointer;
 }
+
+li:hover, li:active {
+    background-color: rgb(226 232 240);
+    color: rgb(2 6 23);
+    padding-left: 10px;
+}

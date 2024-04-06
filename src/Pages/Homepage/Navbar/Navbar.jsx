@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { IoMenu, IoClose } from "react-icons/io5";
 import "./Navbar.css";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,14 +23,9 @@ const Navbar = () => {
                     <a className="btn btn-ghost text-3xl">John Doe</a>
                 </div>
                 <div className="navbar-end">
-                    <div onBlur={closeNavbar}>
+                    <div>
                         <div tabIndex={0} role="button" className="btn btn-ghost" onClick={toggleNavbar}>
-                            {
-                                isOpen ?
-                                    <IoClose className="h-8 w-8" />
-                                    :
-                                    <IoMenu className="h-8 w-8" />
-                            }
+                            <IoMenu className="h-8 w-8" />
                         </div>
                         <AnimatePresence>
                             {
@@ -41,16 +37,21 @@ const Navbar = () => {
                                         exit={{ opacity: 0, x: '100%' }}
                                         transition={{ duration: 0.3, type: 'tween' }}
                                     >
-                                        <h2 className="text-3xl">Menu</h2>
-                                        <hr className="mb-6" />
+                                        <div className="flex justify-between">
+                                            <h2 className="text-3xl">Menu</h2>
+                                            <div onClick={toggleNavbar}>
+                                                <IoClose onBlur={closeNavbar} className="h-8 w-8" />
+                                            </div>
+                                        </div>
+                                        <hr className="mt-2 mb-6" />
                                         <ul>
-                                            <li><a>About</a></li>
-                                            <li><a>Services</a></li>
-                                            <li><a>Skills</a></li>
-                                            <li><a>Projects</a></li>
-                                            <li><a>Timeline</a></li>
-                                            <li><a>Testimonial</a></li>
-                                            <li><a>Contact</a></li>
+                                            <li><Link to="about" spy={true} smooth={true} offset={-120} duration={900} activeClass="active">About</Link></li>
+                                            <li><Link to="services" spy={true} smooth={true} offset={-120} duration={900} activeClass="active">Services</Link></li>
+                                            <li><Link to="skills" spy={true} smooth={true} offset={-120} duration={900} activeClass="active">Skills</Link></li>
+                                            <li><Link to="projects" spy={true} smooth={true} offset={-120} duration={900} activeClass="active">Projects</Link></li>
+                                            <li><Link to="timeline" spy={true} smooth={true} offset={-120} duration={900} activeClass="active">Timeline</Link></li>
+                                            <li><Link to="testimonials" spy={true} smooth={true} offset={-120} duration={900} activeClass="active">Testimonials</Link></li>
+                                            <li><Link to="contact" spy={true} smooth={true} offset={-120} duration={900} activeClass="active">Contact</Link></li>
                                         </ul>
                                     </motion.div>
                                 )
