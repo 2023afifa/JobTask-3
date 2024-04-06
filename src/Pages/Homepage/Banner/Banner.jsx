@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { motion } from 'framer-motion';
 
 const Banner = () => {
     const [profile, setProfile] = useState({});
@@ -14,12 +15,38 @@ const Banner = () => {
 
     return (
         <div>
-            <div className="hero bg-slate-100 mt-20">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={profile.user?.about?.avatar?.url} className="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
-                        <h1 className="text-5xl font-bold">{profile.user?.about?.name}</h1>
-                        <p className="py-6">{profile.user?.about?.subTitle}</p>
+            <div className="hero bg-slate-950 mt-10 py-14">
+                <div className="hero-content flex-col lg:flex-row-reverse lg:gap-20">
+                    <motion.div
+                        style={{
+                            width: 400,
+                            height: 500,
+                            overflow: 'hidden',
+                            borderRadius: '40%',
+                        }} initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6, duration: 0.5 }}>
+                        <motion.img
+                            src={profile.user?.about?.avatar?.url}
+                            alt="Image"
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                            }}
+                        />
+                    </motion.div>
+                    <div className="text-slate-200 font-bold">
+                        <motion.p className="text-xl mb-3" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
+                            Hello, This is
+                        </motion.p>
+                        <motion.h1 className="text-8xl mb-3" style={{ background: 'linear-gradient(to right, #00FFFF, #0000FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
+                            {profile.user?.about?.name}
+                        </motion.h1>
+                        <motion.p className="text-2xl" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
+                            {profile.user?.about?.subTitle}
+                        </motion.p>
+                        <motion.p className="text-6xl mt-10" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 0.5 }}>
+                            {profile.user?.about?.quote}...
+                        </motion.p>
                     </div>
                 </div>
             </div>
