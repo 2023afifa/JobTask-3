@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar navStyle md:px-20">
+            <div className="navbar navStyle md:px-20 py-3">
                 <div className="navbar-start">
                     <a className="btn btn-ghost text-3xl">John Doe</a>
                 </div>

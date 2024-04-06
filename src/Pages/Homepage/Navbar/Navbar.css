@@ -1,6 +1,9 @@
 .navStyle {
     background-color: rgb(2 6 23);
     color: rgb(226 232 240);
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
 }
