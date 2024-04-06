@@ -14,7 +14,7 @@ const Banner = () => {
 
     return (
         <div>
-            <div className="hero bg-base-200">
+            <div className="hero bg-slate-100 mt-20">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={profile.user?.about?.avatar?.url} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
