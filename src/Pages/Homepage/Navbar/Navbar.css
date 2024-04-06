@@ -1,0 +1,58 @@
+.navStyle {
+    background-color: rgb(2 6 23);
+    color: rgb(226 232 240);
+    width: 100%;
+    z-index: 1000;
+}
+
+/* .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.burger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.open {
+    transform: rotate(45deg);
+} */
+
+.navbar-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    height: 100vh;
+    width: 250px;
+    padding: 20px;
+    z-index: 999;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}

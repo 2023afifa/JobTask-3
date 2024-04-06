@@ -18,7 +18,7 @@ const Contact = () => {
                     <div className="hero-content w-full">
                         <div className="w-full">
                             <h2 className="text-3xl font-bold mt-10 mb-3 text-center">Contact with me</h2>
-                            <div className='flex justify-around items-center'>
+                            <div className='lg:flex justify-around items-center'>
                                 <div className="w-1/2">
                                     <form className='mb-10'>
                                         <label className='mr-2 text-xl'>Name</label><br />
