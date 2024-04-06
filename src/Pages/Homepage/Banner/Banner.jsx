@@ -15,7 +15,7 @@ const Banner = () => {
 
     return (
         <div>
-            <div className="hero bg-slate-950 mt-10 py-14">
+            <div className="hero mt-10 py-14">
                 <div className="hero-content flex-col lg:flex-row-reverse lg:gap-20">
                     <motion.div
                         style={{
@@ -34,11 +34,11 @@ const Banner = () => {
                             }}
                         />
                     </motion.div>
-                    <div className="text-slate-200 font-bold">
+                    <div>
                         <motion.p className="text-xl mb-3" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
                             Hello, This is
                         </motion.p>
-                        <motion.h1 className="text-8xl mb-3" style={{ background: 'linear-gradient(to right, #00FFFF, #0000FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
+                        <motion.h1 className="text-8xl mb-3 font-bold"  initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
                             {profile.user?.about?.name}
                         </motion.h1>
                         <motion.p className="text-2xl" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>

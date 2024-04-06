@@ -1,5 +1,5 @@
 .navStyle {
-    background-color: rgb(2 6 23);
+    background-color: rgb(10 10 10);
     color: rgb(226 232 240);
     position: fixed;
     top: 0;
@@ -12,7 +12,7 @@
     position: fixed;
     top: 0px;
     right: 0;
-    background-color: rgb(2 6 23);
+    background-color: rgb(10 10 10);
     color: rgb(226 232 240);
     height: 100vh;
     width: 300px;
@@ -33,6 +33,6 @@ li {
 li:hover,
 li:active {
     background-color: rgb(226 232 240);
-    color: rgb(2 6 23);
+    color: rgb(10 10 10);
     padding-left: 10px;
 }

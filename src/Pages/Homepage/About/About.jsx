@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
     const [profile, setProfile] = useState({});
@@ -10,21 +13,41 @@ const About = () => {
             .catch(error => console.error("Error: ", error))
     }, [])
 
+    useEffect(() => {
+        AOS.init({ duration: "2000" });
+    }, []);
+
 
     return (
-        <div>
-            <h2 className="text-center font-bold text-2xl mt-10 mb-5">About Me</h2>
-            <div className="lg:flex gap-28 mx-20">
-                <div className="text-xl w-1/2">
-                    <h3 className="font-bold my-2">{profile.user?.about?.title}</h3>
-                    <p>{profile.user?.about?.description}</p>
+        <div className="my-20">
+            <motion.h2 className="text-center font-semibold text-5xl mb-10"></motion.h2>
+            <div className="lg:flex lg:justify-around lg:items-center lg:mx-20">
+                <div className="w-2/5" data-aos="fade-right">
+                    <h4 className="text-xl">About Me</h4>
+                    <h3 className="font-semibold text-3xl mb-3">{profile.user?.about?.title}</h3>
+                    <p className="text-lg text-justify">{profile.user?.about?.description}</p>
                 </div>
-                <div className="text-xl">
-                    <p>Name: {profile.user?.about?.name}</p>
-                    <p>Email: {profile.user?.about?.email}</p>
-                    <p>Address: {profile.user?.about?.address}</p>
-                    <p>Experience: {profile.user?.about?.exp_year}</p>
-                    <p>Quote: {profile.user?.about?.quote}</p>
+                <div className="grid lg:grid-cols-2 gap-7" data-aos="fade-left">
+                    <div>
+                        <span className="">Name </span>
+                        <br />
+                        <span className="text-2xl ">{profile.user?.about?.name}</span>
+                    </div>
+                    <div>
+                        <span className="">Email </span>
+                        <br />
+                        <span className="text-2xl ">{profile.user?.about?.contactEmail}</span>
+                    </div>
+                    <div>
+                        <span className="">Address </span>
+                        <br />
+                        <span className="text-2xl ">{profile.user?.about?.address}</span>
+                    </div>
+                    <div>
+                        <span className="">Experience </span>
+                        <br />
+                        <span className="text-2xl ">{profile.user?.about?.exp_year} years</span>
+                    </div>
                 </div>
             </div>
         </div>
