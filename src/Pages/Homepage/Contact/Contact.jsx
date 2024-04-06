@@ -13,7 +13,7 @@ const Contact = () => {
     return (
         <div>
             <div className="lg:mx-20 mb-20">
-                <div className="hero" style={{ backgroundImage: 'url()' }}>
+                <div className="hero">
                     <div className="hero-overlay bg-opacity-30"></div>
                     <div className="hero-content w-full">
                         <div className="w-full">
